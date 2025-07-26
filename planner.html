@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Your Trip - TravelAI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-paper-plane"></i>
+                <span>TravelAI</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="planner.html" class="nav-link active">Plan Trip</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="planner-main">
+        <div class="container">
+            <div class="planner-header">
+                <h1>Plan Your Perfect Trip</h1>
+                <p>Tell our AI about your dream destination and preferences</p>
+            </div>
+
+            <div class="planner-container">
+                <form class="trip-form" id="tripForm">
+                    <div class="form-step active" data-step="1">
+                        <h2>Where do you want to go?</h2>
+                        <div class="form-group">
+                            <label for="destination">Destination</label>
+                            <div class="input-group">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <input type="text" id="destination" name="destination" placeholder="Enter city, country, or region" required>
+                                <div class="suggestions" id="destinationSuggestions"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="startDate">Start Date</label>
+                                <div class="input-group">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <input type="date" id="startDate" name="startDate" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="endDate">End Date</label>
+                                <div class="input-group">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <input type="date" id="endDate" name="endDate" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="travelers">Number of Travelers</label>
+                            <div class="input-group">
+                                <i class="fas fa-users"></i>
+                                <select id="travelers" name="travelers" required>
+                                    <option value="">Select travelers</option>
+                                    <option value="1">Solo (1 person)</option>
+                                    <option value="2">Couple (2 people)</option>
+                                    <option value="3-4">Small group (3-4 people)</option>
+                                    <option value="5+">Large group (5+ people)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn btn-primary next-step">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="form-step" data-step="2">
+                        <h2>What's your budget?</h2>
+                        <div class="budget-options">
+                            <div class="budget-card" data-budget="budget">
+                                <i class="fas fa-wallet"></i>
+                                <h3>Budget</h3>
+                                <p>$50-100 per day</p>
+                                <span>Hostels, street food, public transport</span>
+                            </div>
+                            <div class="budget-card" data-budget="mid-range">
+                                <i class="fas fa-credit-card"></i>
+                                <h3>Mid-range</h3>
+                                <p>$100-300 per day</p>
+                                <span>Hotels, restaurants, tours</span>
+                            </div>
+                            <div class="budget-card" data-budget="luxury">
+                                <i class="fas fa-gem"></i>
+                                <h3>Luxury</h3>
+                                <p>$300+ per day</p>
+                                <span>5-star hotels, fine dining, private tours</span>
+                            </div>
+                        </div>
+
+                        <div class="form-buttons">
+                            <button type="button" class="btn btn-secondary prev-step">
+                                <i class="fas fa-arrow-left"></i> Previous
+                            </button>
+                            <button type="button" class="btn btn-primary next-step">
+                                Next <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-step" data-step="3">
+                        <h2>What are your interests?</h2>
+                        <div class="interests-grid">
+                            <div class="interest-card" data-interest="culture">
+                                <i class="fas fa-university"></i>
+                                <span>Culture & History</span>
+                            </div>
+                            <div class="interest-card" data-interest="food">
+                                <i class="fas fa-utensils"></i>
+                                <span>Food & Cuisine</span>
+                            </div>
+                            <div class="interest-card" data-interest="adventure">
+                                <i class="fas fa-mountain"></i>
+                                <span>Adventure</span>
+                            </div>
+                            <div class="interest-card" data-interest="nature">
+                                <i class="fas fa-tree"></i>
+                                <span>Nature</span>
+                            </div>
+                            <div class="interest-card" data-interest="nightlife">
+                                <i class="fas fa-cocktail"></i>
+                                <span>Nightlife</span>
+                            </div>
+                            <div class="interest-card" data-interest="shopping">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>Shopping</span>
+                            </div>
+                            <div class="interest-card" data-interest="relaxation">
+                                <i class="fas fa-spa"></i>
+                                <span>Relaxation</span>
+                            </div>
+                            <div class="interest-card" data-interest="photography">
+                                <i class="fas fa-camera"></i>
+                                <span>Photography</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="specialRequests">Special Requests (Optional)</label>
+                            <textarea id="specialRequests" name="specialRequests" placeholder="Any specific places you want to visit, dietary restrictions, accessibility needs, etc."></textarea>
+                        </div>
+
+                        <div class="form-buttons">
+                            <button type="button" class="btn btn-secondary prev-step">
+                                <i class="fas fa-arrow-left"></i> Previous
+                            </button>
+                            <button type="submit" class="btn btn-primary" id="generateTrip">
+                                <i class="fas fa-magic"></i> Generate My Trip
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                    <div class="progress-steps">
+                        <div class="progress-step active">1</div>
+                        <div class="progress-step">2</div>
+                        <div class="progress-step">3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading Modal -->
+        <div class="modal" id="loadingModal">
+            <div class="modal-content">
+                <div class="loader">
+                    <div class="loader-plane">
+                        <i class="fas fa-paper-plane"></i>
+                    </div>
+                    <div class="loader-text">
+                        <h3>Creating your perfect trip...</h3>
+                        <p id="loadingText">Analyzing destinations...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="api.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Trip Itinerary - TravelAI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-paper-plane"></i>
+                <span>TravelAI</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="planner.html" class="nav-link">Plan Trip</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="results-main">
+        <div class="container">
+            <div class="results-header">
+                <button class="btn btn-secondary" onclick="history.back()">
+                    <i class="fas fa-arrow-left"></i> Back to Planning
+                </button>
+                <div class="results-title">
+                    <h1 id="tripTitle">Your Perfect Trip</h1>
+                    <p id="tripSubtitle">Personalized itinerary created by AI</p>
+                </div>
+                <div class="results-actions">
+                    <button class="btn btn-outline" onclick="printItinerary()">
+                        <i class="fas fa-print"></i> Print
+                    </button>
+                    <button class="btn btn-primary" onclick="shareItinerary()">
+                        <i class="fas fa-share"></i> Share
+                    </button>
+                </div>
+            </div>
+
+            <div class="results-container">
+                <div class="trip-overview">
+                    <div class="overview-card">
+                        <h3>Trip Overview</h3>
+                        <div class="overview-details" id="tripOverview">
+                            <!-- Trip overview will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="itinerary-content">
+                    <div class="itinerary-tabs">
+                        <button class="tab-btn active" data-tab="itinerary">
+                            <i class="fas fa-calendar"></i> Itinerary
+                        </button>
+                        <button class="tab-btn" data-tab="recommendations">
+                            <i class="fas fa-star"></i> Recommendations
+                        </button>
+                        <button class="tab-btn" data-tab="budget">
+                            <i class="fas fa-dollar-sign"></i> Budget
+                        </button>
+                    </div>
+
+                    <div class="tab-content active" id="itinerary">
+                        <div class="itinerary-timeline" id="itineraryTimeline">
+                            <!-- Itinerary will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="recommendations">
+                        <div class="recommendations-grid" id="recommendationsGrid">
+                            <!-- Recommendations will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="budget">
+                        <div class="budget-breakdown" id="budgetBreakdown">
+                            <!-- Budget breakdown will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-footer">
+                <div class="feedback-section">
+                    <h3>How was your AI-generated itinerary?</h3>
+                    <div class="rating-stars">
+                        <i class="fas fa-star" data-rating="1"></i>
+                        <i class="fas fa-star" data-rating="2"></i>
+                        <i class="fas fa-star" data-rating="3"></i>
+                        <i class="fas fa-star" data-rating="4"></i>
+                        <i class="fas fa-star" data-rating="5"></i>
+                    </div>
+                </div>
+                <div class="next-steps">
+                    <h3>Ready for your next adventure?</h3>
+                    <a href="planner.html" class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Plan Another Trip
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="results.js"></script>
+</body>
+</html>

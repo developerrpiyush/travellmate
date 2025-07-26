@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelAI - Your Intelligent Travel Planner</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-paper-plane"></i>
+                <span>TravelAI</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="planner.html" class="nav-link">Plan Trip</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-background">
+                <div class="floating-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                    <div class="shape shape-4"></div>
+                </div>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Plan Your Perfect Trip with
+                    <span class="gradient-text">AI Intelligence</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Discover personalized travel experiences powered by advanced AI. 
+                    Get custom itineraries, local insights, and budget-friendly recommendations.
+                </p>
+                <div class="hero-buttons">
+                    <a href="planner.html" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        Start Planning
+                    </a>
+                    <button class="btn btn-secondary" onclick="scrollToFeatures()">
+                        <i class="fas fa-play"></i>
+                        Learn More
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">50K+</span>
+                        <span class="stat-label">Trips Planned</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">200+</span>
+                        <span class="stat-label">Destinations</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">4.9★</span>
+                        <span class="stat-label">User Rating</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features" id="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Why Choose TravelAI?</h2>
+                    <p>Experience the future of travel planning with our intelligent features</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>AI-Powered Planning</h3>
+                        <p>Our advanced AI analyzes millions of travel data points to create personalized itineraries just for you.</p>
+                    </div>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h3>Smart Recommendations</h3>
+                        <p>Get insider tips and hidden gems based on your preferences, budget, and travel style.</p>
+                    </div>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Real-time Updates</h3>
+                        <p>Stay informed with live updates on weather, events, and local conditions at your destination.</p>
+                    </div>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="feature-icon">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <h3>Budget Optimization</h3>
+                        <p>Maximize your travel experience while staying within your budget with smart cost analysis.</p>
+                    </div>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile Friendly</h3>
+                        <p>Access your itinerary anywhere, anytime with our responsive design and offline capabilities.</p>
+                    </div>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Group Planning</h3>
+                        <p>Collaborate with friends and family to plan the perfect group adventure together.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works">
+            <div class="container">
+                <div class="section-header">
+                    <h2>How It Works</h2>
+                    <p>Get your perfect trip in three simple steps</p>
+                </div>
+                <div class="steps">
+                    <div class="step" data-aos="fade-right" data-aos-delay="100">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Tell Us Your Dreams</h3>
+                            <p>Share your destination preferences, travel dates, budget, and interests with our AI.</p>
+                        </div>
+                    </div>
+                    <div class="step" data-aos="fade-right" data-aos-delay="200">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>AI Creates Magic</h3>
+                            <p>Our intelligent system crafts a personalized itinerary with activities, restaurants, and accommodations.</p>
+                        </div>
+                    </div>
+                    <div class="step" data-aos="fade-right" data-aos-delay="300">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Enjoy Your Journey</h3>
+                            <p>Get your detailed itinerary with maps, bookings, and local recommendations ready to go.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Start Your Adventure?</h2>
+                    <p>Join thousands of travelers who trust TravelAI for their perfect trips</p>
+                    <a href="planner.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-paper-plane"></i>
+                        Plan My Trip Now
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>TravelAI</span>
+                    </div>
+                    <p>Your intelligent travel companion for unforgettable journeys.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="planner.html">Plan Trip</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TravelAI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
